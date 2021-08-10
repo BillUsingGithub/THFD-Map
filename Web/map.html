@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>THFD Hydrants</title>
+
+		<!-- Firebase Library -->
+		<script defer src="/__/firebase/8.8.0/firebase-app.js"></script>
+		<script defer src="/__/firebase/8.8.0/firebase-app-check.js"></script>
+		<script defer src="/__/firebase/8.8.0/firebase-analytics.js"></script>
+		<script defer src="/__/firebase/8.8.0/firebase-auth.js"></script>
+		<script defer src="/__/firebase/8.8.0/firebase-database.js"></script>
+		<script defer src="/__/firebase/8.8.0/firebase-performance.js"></script>
+		<script defer src="/__/firebase/8.8.0/firebase-storage.js"></script>
+		<script defer src="/__/firebase/init.js"></script>
+
+		<!-- Algolia -->
+		<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" 
+			integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" 
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" 
+			integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" 
+			crossorigin="anonymous"></script>
+		<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" 
+			integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" 
+			crossorigin="anonymous">-->
+		<link rel="stylesheet" 
+		      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" 
+		      integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" 
+		      crossorigin="anonymous">
+
+		<!-- Font Asesome -->
+		<script defer src="https://kit.fontawesome.com/505a39fd16.js" crossorigin="anonymous"></script>
+
+		<!-- JavaScript -->
+		<script defer src="./JS/map.js"></script>
+
+		<!-- Google Map Library -->
+		<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0f8wsUH0UczQ26p58tiTBie1ba_oZNfc&callback=main&libraries=places"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="./CSS/map.css"></link>
+	</head>
+	<body>
+		<div id="map"></div>
+		<div id="search-panel">
+			<div id="search-box">
+				<input id="search-input" list="" autocomplete="off">
+				<!-- <i id="search-icon" class="fas fa-search"></i> -->
+			</div>
+			<datalist id="search-list" style="overflow: auto;"></datalist>
+			<div id="hits">
+				<ul id="hit-list"></ul>
+			</div>
+		</div>
+	</body>
+</html>
